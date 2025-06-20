@@ -1,12 +1,11 @@
+from typing import Any
 from django.http import HttpResponse
 from django.shortcuts import render
 
 
-def index(request) -> HttpResponse:
-    # return render(request, "index.html")
-    return HttpResponse("Hello world index")
+def index(request):
+    return render(request, "main/index.html")
 
 
-def about(request) -> HttpResponse:
-    # return render(request, "about.html")
-    return HttpResponse("Hello world about")
+def about(request):
+    return render(request, "about.html")
