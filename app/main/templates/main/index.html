@@ -15,6 +15,11 @@
     </li>
     <h2>{{ title }}</h2>
     <div>
+        {% if is_aut %}
+            <p>{{ list.0 }}</p>
+            <p>{{ dict.first }}</p>
+        {% endif %}
+
        <p>{{ content }}</p>
        <p>{{ list.1 }}</p>
        <p>{{ dict.first }}</p>
