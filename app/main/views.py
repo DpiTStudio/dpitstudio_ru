@@ -1,11 +1,14 @@
-from typing import Any
 from django.http import HttpResponse
 from django.shortcuts import render
 
 
 def index(request):
-    return render(request, "main/index.html")
+    context = {
+        "title": "Главная страница сайта",
+        "content": "Добро пожаловать на главную страницу нашего сайта. Здесь вы можете найти информацию о нашем проекте и наших услугах. Если у вас есть какие-либо вопросы или пожелания, пожалуйста, свяжитесь с нами. Мы будем рады помочь вам.",
+    }
+    return render(request, "main/index.html", context=context)
 
 
-def about(request):
+def about(request) -> HttpResponse:
     return render(request, "about.html")

@@ -3,12 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главаня страница</title>
+    <title>{{ title }}</title>
 </head>
 <body>
     <h1>Главаня страница</h1>
-    <h2>Добро пожаловать на главную страницу нашего сайта</h2>
-    <a href="{% url 'about' %}">О нас</a>
-    
+    <a href="{% url 'about' %}" target="_blank">О нас</a>
+    <h2>{{ title }}</h2>
+    <div>
+        {{ content }}
+    </div>
 </body>
 </html>
