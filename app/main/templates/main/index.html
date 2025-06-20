@@ -8,12 +8,8 @@
 <body>
     <h1>{{ title }}</h1>
         <div>
-            <ol type="I" start="1">
+            <ol type="1" start="1">
                 <li><a href="{% url 'index' %}" target="_blank">Главная</a></li>
-            </ol>
-        </div>
-        <div>
-            <ol type="I" start="1">
                 <li><a href="{% url 'about' %}" target="_blank">О нас</a></li>
             </ol>
         </div>
@@ -22,8 +18,8 @@
         {% if is_aut %}
             <p>{{ list.0 }}</p>
             <p>{{ dict.first }}</p>
-            <p>{{ content }}</p>
         {% endif %}
+       <p style="color: brown; border-color: bisque; padding-left: 1.4%; padding-bottom: 0.1%;">{{ content }}</p>
        <p>{{ bool }}</p>
     </div>
 </body>
