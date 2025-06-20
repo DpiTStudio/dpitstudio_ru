@@ -6,23 +6,24 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <h1>Главаня страница</h1>
-    <ol>
-        <li><a href="{% url 'index' %}" target="_blank">Главная</a></li>
-        <li><a href="{% url 'about' %}" target="_blank">О нас</a></li>
-        <li></li>
-    </ol>
-    </li>
-    <h2>{{ title }}</h2>
-    <div>
+    <h1>{{ title }}</h1>
+        <div>
+            <ol type="I" start="1">
+                <li><a href="{% url 'index' %}" target="_blank">Главная</a></li>
+            </ol>
+        </div>
+        <div>
+            <ol type="I" start="1">
+                <li><a href="{% url 'about' %}" target="_blank">О нас</a></li>
+            </ol>
+        </div>
+    
+    <div style="border: 1px solid;">
         {% if is_aut %}
             <p>{{ list.0 }}</p>
             <p>{{ dict.first }}</p>
+            <p>{{ content }}</p>
         {% endif %}
-
-       <p>{{ content }}</p>
-       <p>{{ list.1 }}</p>
-       <p>{{ dict.first }}</p>
        <p>{{ bool }}</p>
     </div>
 </body>
