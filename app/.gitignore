@@ -2,7 +2,6 @@
 venv/
 .pylintrc
 __pycache__/
-bc
 
 # ide
 .vscode

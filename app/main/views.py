@@ -14,7 +14,7 @@ def index(request):
 def about(request):
     con_text = {
         "title": "Страница о нас DPITSTUDIO",
-        "content": "Истоия нас и наши услуги. Создание сайтов и продвижение в сети интернет в писковых компаниях.",
+        "content": "Истоия нас и наши услуги",
         "is_aut": True,
     }
     return render(request, "main/about.html", context=con_text)
