@@ -1,25 +1,26 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
     <title>{{ title }}</title>
 </head>
 <body>
     <h1>{{ title }}</h1>
         <div>
             <ol type="1" start="1">
-                <li><a href="{% url 'index' %}" target="_top">Главная</a></li>
-                <li><a href="{% url 'about' %}" target="_top">О нас</a></li>
+                <li><a href="{% url 'index' %}" target="_blank">Главная</a></li>
+                <li><a href="{% url 'about' %}" target="_blank">О нас</a></li>
             </ol>
         </div>
     
     <div style="border: 1px solid;">
+        {% if is_aut %}
+            <p>{{ list.0 }}</p>
+            <p>{{ dict.first }}</p>
+        {% endif %}
        <p style="color: brown; border-color: bisque; padding-left: 1.4%; padding-bottom: 0.1%;">{{ content }}</p>
+       <p style="color: red;">{{ bool }}</p>
     </div>
 </body>
 </html>
